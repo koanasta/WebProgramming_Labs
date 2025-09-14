@@ -1,0 +1,43 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-title{
+    font-size: 24.12px;
+}
+.header__nav ul{
+    display: flex;
+}
+.header__nav-item{
+    margin-right: 50px;
+    font-size: 11.09px;
+    font-weight: 600;
+}
+
+.header__try-now{
+    border-radius: 33.96px;
+    width: 118.51px;
+    height: 31.88px;
+    border: 1.04px;
+    color: #1943EF;
+    background-color: #fff;
+    border-color: #1943EF;
+    border-style: solid;
+    font-weight: 600;
+}
+.header__try-now:hover{
+    background-color: #1943EF;
+    color: #fff;
+}
+
+.header__login{
+    border-radius: 33.96px;
+    width: 118.51px;
+    height: 31.88px;
+    background-color: #f1efef;;
+    border-style: none;
+    margin-right: 150px;
+    font-weight: 600;
+    color: #73738D;
+}
