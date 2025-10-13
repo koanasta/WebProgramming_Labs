@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Relationz</title>
+  <link rel="stylesheet" href="css/contacts.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__container">
+        <div class="header__content">
+          <h3 class="header__logo">Relationz</h3>
+
+          <nav class="header__menu menu">
+            <ul class="menu__list">
+              <li class="menu__item">
+                <a href="contacts.html" class="menu__link">My Contacts</a>
+              </li>
+
+              <li class="menu__item">
+                <a href="add-contact.html" class="menu__link">Add Contact</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <form action="#" class="header__search-form search-form" role="search">
+          <input type="search" class="search-form__input" aria-label="Search for contacts" />
+          <div class="search-form__buttons">
+            <button type="submit" class="search-form__button search-form__button--search">Search</button>
+            <button type="reset" class="search-form__button search-form__button--reset">Clear</button>
+          </div>
+        </form>
+      </div>
+    </header>
+
+    <main class="page" role="main">
+      <div class="page__container">
+        <aside class="page__sidebar sidebar">
+          <section class="sidebar__controls controls">
+            <div class="controls__top">
+              <h2 class="controls__title">Manage contacts</h2>
+
+              <div class="controls__option">
+                <label for="sortByExperience" class="controls__label">
+                  <input type="checkbox" id="sortByExperience" class="controls__checkbox" checked />
+                  <span class="controls__switch"></span>
+                  Sort by the most <br />
+                  experienced contacts
+                </label>
+              </div>
+            </div>
+
+            <div class="controls__bottom">
+              <p class="controls__subtitle">Count total number of contacts:</p>
+
+              <button class="controls__button">Count</button>
+
+              <p class="controls__total">
+                Total:
+                <span class="controls__total-value">0</span>
+              </p>
+            </div>
+          </section>
+        </aside>
+
+        <section class="page__content contacts">
+          <ul class="contacts__list">
+            <li class="contacts__item contact-card">
+              <div class="contact-card__body">
+                <div class="contact-card__content">
+                  <h2 class="contact-card__name">John Smith</h2>
+
+                  <p class="contact-card__phone">+3809696964125</p>
+                  <p class="contact-card__experience" data-expense="5">
+                    Years of experinece: 5
+                  </p>
+                </div>
+
+                <div class="contact-card__buttons">
+                  <button class="contact-card__button contact-card__button--edit">
+                    Edit
+                  </button>
+                  <button class="contact-card__button contact-card__button--remove">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="contacts__item contact-card">
+              <div class="contact-card__body">
+                <div class="contact-card__content">
+                  <h2 class="contact-card__name">Jane Smith</h2>
+
+                  <p class="contact-card__phone">+380962377442</p>
+                  <p class="contact-card__experience" data-expense="10">
+                    Years of experinece: 10
+                  </p>
+                </div>
+
+                <div class="contact-card__buttons">
+                  <button class="contact-card__button contact-card__button--edit">
+                    Edit
+                  </button>
+                  <button class="contact-card__button contact-card__button--remove">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </li>
+            <li class="contacts__item contact-card">
+              <div class="contact-card__body">
+                <div class="contact-card__content">
+                  <h2 class="contact-card__name">John Doe</h2>
+
+                  <p class="contact-card__phone">+077567894123</p>
+                  <p class="contact-card__experience" data-expense="2">
+                    Years of experinece: 2
+                  </p>
+                </div>
+
+                <div class="contact-card__buttons">
+                  <button class="contact-card__button contact-card__button--edit">
+                    Edit
+                  </button>
+                  <button class="contact-card__button contact-card__button--remove">
+                    Remove
+                  </button>
+                </div>
+              </div>
+            </li>
+
+            
+          </ul>
+        </section>
+      </div>
+    </main>
+
+    <footer class="footer">footer</footer>
+  </div>
+
+  <script src="contacts.js"></script>
+</body>
+
+</html>
