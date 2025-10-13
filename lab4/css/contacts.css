@@ -1,0 +1,409 @@
+@import url("reset.css");
+
+@font-face {
+    font-family: 'Gilroy Bold';
+    font-weight: 900;
+    font-style: bold;
+    src: url("Gilroy-Semibold.woff");
+}
+@font-face {
+    font-family: 'Gilroy Light';
+    font-weight: 500;
+    font-style: normal;
+    src: url("Gilroy-Light.woff");
+}
+
+body {
+    font-family: 'Gilroy Light';
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+  overflow: clip;
+}
+
+.wrapper > main {
+  flex-grow: 1;
+}
+
+[class*="__container"] {
+  max-width: 1230px;
+  margin: 0 auto;
+  padding-inline: 15px;
+}
+
+/* // */
+
+.header {
+  height: 60px; 
+}
+.header__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  border: 2px solid rgb(103, 126, 252);
+  border-radius: 4px;
+  background-color: rgb(237, 237, 237);
+}
+.header__content {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100%;
+}
+.header__logo {
+  color: rgb(29, 29, 222);
+  font-size: 20px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__menu {
+  height: 100%;
+}
+.menu__list {
+  display: flex;
+  height: 100%;
+}
+.menu__item {
+  height: 100%;
+}
+.menu__link {
+  height: 100%;
+  padding: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.2s ease-in-out;
+  font-size: 18px;
+}
+.header__search-form {
+  display: flex;
+  gap: 1rem;
+}
+.search-form__input {
+  border: 2px solid grey;
+  border-radius: 4px;
+  padding: 3px 15px;
+  font-size: 16px;
+  background-color: white;
+}
+.search-form__input::placeholder {
+  color: black;
+  transition: color 0.2s ease-in-out;
+}
+.search-form__input:focus::placeholder {
+  color: transparent;
+}
+.search-form__buttons {
+  display: flex;
+  gap: 1rem;
+  font-weight: 400;
+}
+.search-form__button {
+  border: 2px solid;
+  border-radius: 4px;
+  padding: 10px 30px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.search-form__button--search {
+  border-color: rgb(95, 193, 254);
+  color: rgb(95, 193, 254);
+}
+.search-form__button--reset {
+  border-color: lightcoral;
+  color: lightcoral;
+}
+
+@media (any-hover: hover) and (pointer: fine) {
+  .search-form__button--search:hover {
+    background-color: rgb(95, 193, 254);
+    color: white;
+    transition: 0.3s;
+  }
+
+  .search-form__button--reset:hover {
+    background-color: lightcoral;
+    color: white;
+    transition: 0.3s;
+  }
+
+  .menu__link:hover {
+    background-color: lightgrey;
+  }
+}
+
+/* =============================================================================================================================================================================== */
+/* =============================================================================================================================================================================== */
+/* =============================================================================================================================================================================== */
+
+.page {
+  padding-block-start: 30px;
+}
+.page__container {
+  display: flex;
+  gap: 20px;
+  align-items: stretch;
+}
+.page__content {
+  flex-grow: 1;
+}
+.page__sidebar {
+  min-width: 300px;
+  padding-bottom: 50px;
+}
+.sidebar {
+  border-right: 2px solid grey;
+  padding-inline-end: 10px;
+}
+.controls__top {
+  border-bottom: 2px solid rgb(185, 185, 185);
+  padding-block-end: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.controls__title {
+  text-align: center;
+  font-size: 25px;
+}
+.controls__label {
+  font-weight: 700;
+  color: rgb(79, 79, 79);
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.controls__bottom {
+  padding-block-start: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.controls__checkbox {
+  display: none;
+}
+.controls__switch {
+  display: inline-block;
+  width: 60px;
+  height: 26px;
+  background-color: #e74c3c;
+  border-radius: 26px;
+  position: relative;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+.controls__switch::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+.controls__checkbox:checked + .controls__switch {
+  background-color: #3498db;
+}
+.controls__checkbox:checked + .controls__switch::after {
+  transform: translateX(34px);
+}
+.controls__button {
+  border-radius: 4px;
+  color: white;
+  background-color: rgb(30, 199, 255);
+  padding: 10px 15px;
+  border: 2px solid rgb(30, 199, 255);
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+.controls__total {
+  display: flex;
+  justify-content: space-between;
+}
+.controls__total-value {
+  font-weight: 600;
+}
+.animals__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(235px, 1fr));
+  gap: 20px;
+}
+.animal-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+}
+.animal-card__img {
+  background-color: grey;
+  object-fit: cover;
+  aspect-ratio: 235 / 180;
+}
+.animal-card__body {
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  flex-grow: 1;
+}
+.animal-card__content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex-grow: 1;
+}
+.animal-card__title {
+  font-weight: 600;
+  font-size: 30px;
+}
+.animal-card__description {
+  line-height: 1.4;
+  color: rgb(82, 82, 82);
+  flex-grow: 1;
+}
+.animal-card__last-update {
+  color: rgb(168, 168, 168);
+  font-size: 14px;
+}
+.animal-card__buttons {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+.animal-card__button {
+  padding: 10px 15px;
+  border: 2px solid;
+  border-radius: 4px;
+  min-width: 100px;
+  transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+  width: 100%;
+}
+.animal-card__button--edit {
+  border-color: lightskyblue;
+  color: lightskyblue;
+}
+.animal-card__button--remove {
+  border-color: lightcoral;
+  color: lightcoral;
+}
+
+@media (any-hover: hover) and (pointer: fine) {
+  .animal-card__button--edit:hover {
+    background-color: lightskyblue;
+    color: white;
+  }
+
+  .animal-card__button--remove:hover {
+    background-color: lightcoral;
+    color: white;
+  }
+
+  .controls__button:hover {
+    background-color: transparent;
+    color: rgb(30, 199, 255);
+  }
+}
+
+/* =============================================================================================================================================================================== */
+/* =============================================================================================================================================================================== */
+/* =============================================================================================================================================================================== */
+
+.page__container:has(.animals-form) {
+  max-width: 600px;
+}
+.animals-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.animals-form input,
+textarea,
+select,
+button {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid rgb(157, 157, 157);
+  border-radius: 4px;
+}
+.animals-form input::placeholder,
+textarea::placeholder {
+  color: grey;
+}
+.animals-form__title {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 700;
+}
+.animals-form__label {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.animals-form__textarea {
+  min-height: 150px;
+}
+.animals-form__type {
+  font-size: 18px;
+}
+.animals-form__select {
+  color: grey;
+}
+.animals-form__button {
+  padding: 15px 15px;
+  background-color: rgb(0, 191, 255);
+  border: 2px solid;
+  border-radius: 4px;
+  border-color: rgb(0, 191, 255);
+  color: white;
+  transition: background-color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+@media (any-hover: hover) and (pointer: fine) {
+  .animals-form__button:hover {
+    background-color: rgb(79, 79, 255);
+    border-color: rgb(79, 79, 255);
+  }
+}
+
+
+.modal-warning {
+  position: fixed;
+  inset: 0;
+  background: white;
+  display: none; 
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.modal-warning__content {
+  background: white;
+  color: rgb(79, 79, 255);;
+  border-radius: 12px;
+  padding: 24px;
+  text-align: center;
+  width: 300px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+.modal-warning__btn {
+  margin-top: 16px;
+  background: rgb(79, 79, 255);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.modal-warning__btn:hover {
+  background: rgb(0, 191, 255);
+}
