@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Relationz</title>
+    <link rel="stylesheet" href="css/contacts.css"/>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <div class="header__container">
+          <div class="header__content">
+            <a href="contacts.html" class="header__logo">My Contacts</a>
+
+            <nav class="header__menu menu">
+              <ul class="menu__list">
+                <li class="menu__item">
+                  <a href="contacts.html" class="menu__link">My Contacts</a>
+                </li>
+
+                <li class="menu__item">
+                  <a href="add-contact.html" class="menu__link">Add Contact</a>
+                </li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </header>
+
+      <main class="page" role="main">
+        <div class="page__container">
+            <form class="page__form contacts-form" action="/edit-contact" method="post">
+                <h1 class="contact-form__title">
+                    Edit Contact
+                </h1>
+
+                <div class="contact-form__name">
+                    <label class="contacts-form__label" for="title">Name</label>
+                    <input class="contacts-form__input" type="text" id="title" name="title" placeholder="Enter name" required />
+                </div>
+
+                <div class="contacts-form__phone">
+                    <label class="contacts-form__label" for="phone">Phone</label>
+                    <textarea class="contacts-form__textarea" id="phone" name="phone" placeholder="Enter phone" required></textarea>
+                </div>
+
+                <div class="contacts-form__experience">
+                    <label class="contacts-form__label" for="experience">Experience (in years)</label>
+                    <input class="contacts-form__input" type="number" id="experience" name="experience" required/>
+                </div>
+                <button type="submit" class="contacts-form__button">Submit</button>
+            </form>
+        </div>
+      </main>
+
+      <footer class="footer"></footer>
+    </div>
+
+    <script type="module" src="contacts.js"></script>
+  </body>
+</html>
